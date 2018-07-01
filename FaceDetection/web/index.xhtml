@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <p:inputText value="#{restController.urlImage}" placeholder="Url de la Imagen"/>
+            <p:commandButton id="btnConsultar" value="Get Info" actionListener="#{restController.consultar()}" update="form"/>
+            <br/>
+            <spam style="font-size: 50px;">#{restController.resultado}</spam>
+            <p:blockUI block="form" trigger="btnConsultar" />
+            <img src="#{restController.modelo.LINK}" />
+            <p:panelGrid columns="2" id="pnlg">
+                <p:outputLabel value="Emoción"/>
+                <p:outputLabel value="#{restController.modelo.EMOCION}"/>
+                <p:outputLabel value="Bigote"/>
+                <p:outputLabel value="#{restController.modelo.BIGOTE}"/>
+                <p:outputLabel value="Barba"/>
+                <p:outputLabel value="#{restController.modelo.BARBA}"/>
+                <p:outputLabel value="Pastillas"/>
+                <p:outputLabel value="#{restController.modelo.PATILLAS}"/>
+                <p:outputLabel value="Lentes"/>
+                <p:outputLabel value="#{restController.modelo.GAFAS}"/>
+                <p:outputLabel value="Edad"/>
+                <p:outputLabel value="#{restController.modelo.age}"/>
+                <p:outputLabel value="Sexo"/>
+                <p:outputLabel value="#{restController.modelo.gender}"/>
+                <p:outputLabel value="Ojos Pintados"/>
+                <p:outputLabel value="#{restController.modelo.OJOSMAQUILLADOS}"/>
+                <p:outputLabel value="Labios Pintados"/>
+                <p:outputLabel value="#{restController.modelo.LABIOSPINTADOS}"/>
+                <p:outputLabel value="Es Calvo"/>
+                <p:outputLabel value="#{restController.modelo.CALVO}"/>
+                <p:outputLabel value="Cabello Invisible"/>
+                <p:outputLabel value="#{restController.modelo.INVENSIBLE}"/>
+                <p:outputLabel value="Color de Pelo"/>
+                <p:outputLabel value="#{restController.modelo.COLORPELO}"/>
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
