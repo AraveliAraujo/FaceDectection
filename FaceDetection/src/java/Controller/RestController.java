@@ -27,4 +27,8 @@ public class RestController implements Serializable {
         }
     }
 
+    public void clear() throws Exception {
+        modelo = new modelo();
+    }
+
 }
